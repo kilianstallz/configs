@@ -20,6 +20,7 @@ return {
       "gomod",
       "gowork",
       "gosum",
+      "graphql",
     },
   },
 }

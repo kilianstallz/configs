@@ -13,6 +13,11 @@ return {
         "delve",
         "sql-formatter",
       },
+
+      registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+      },
     },
   },
 }
