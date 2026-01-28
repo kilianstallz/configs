@@ -1,8 +1,17 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
+        "gofumpt",
+        "goimports",
+        "golines",
+        "gomodifytags",
+        "impl",
+        "golangci-lint",
+        "delve",
+        "gopls",
+        "lua-language-server",
         "eslint-lsp",
         "hadolint",
         "prettierd",

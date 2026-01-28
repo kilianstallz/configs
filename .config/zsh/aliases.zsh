@@ -7,9 +7,9 @@ alias cat="bat"
 alias c="clear"
 alias cl='clear'
 alias s="source $HOME/.zshrc"
-alias fc="nvim $HOME/.zshcr"
+alias fc="nvim $HOME/.zshrc"
 alias find='fd'
-alias grep='rg'
+# alias grep='rg'
 alias la=tree
 
 
@@ -80,3 +80,13 @@ alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias ltree="eza --tree --level=2  --icons --git"
 
+
+# Quick jj commands
+alias jn='jj new'
+alias js='jj status'
+alias jl='jj log'
+alias jd='jj diff'
+alias jf='jj git fetch'
+
+# Abandon empty commits automatically
+alias ja='jj abandon'

@@ -4,13 +4,13 @@ add_newline = false
 format = """$directory$character"""
 palette = "catppuccin_mocha"
 
-[fill]
-symbol = " "
-
 
 # move the rest of the prompt to the right
-right_format = """$all"""
+right_format = """$git_branch$golang$kubernetes$custom"""
 command_timeout = 1000
+
+[fill]
+symbol = " "
 
 [character]
 success_symbol = '[➜](bold green)'
@@ -35,6 +35,16 @@ format = '[$symbol$context( \($namespace\))]($style)'
 
 [docker_context]
 format = '[$context]($style)'
+
+[custom.jira_track]
+command = """
+if [ -f ~/.jira-track/state.json ]; then
+  jq -r 'if .active_ticket and .active_ticket != "" then .active_ticket else empty end' ~/.jira-track/state.json 2>/dev/null
+fi
+"""
+when = '[ -f ~/.jira-track/state.json ] && [ -s ~/.jira-track/state.json ]'
+format = '[🎫 $output](bold blue) '
+disabled = false
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
